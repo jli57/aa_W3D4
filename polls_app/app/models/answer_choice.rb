@@ -10,7 +10,7 @@
 #
 
 class AnswerChoice < ApplicationRecord
-
+  validates :text, presence: true
   belongs_to :question,
     class_name: :Question,
     primary_key: :id,

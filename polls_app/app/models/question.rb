@@ -11,10 +11,12 @@
 
 class Question < ApplicationRecord
 
+  validates :text, presence: true
+      
   has_many :answer_choices,
     class_name: :AnswerChoice,
     primary_key: :id,
-    foreign_key: :answer_choice_id
+    foreign_key: :question_id
 
   belongs_to :poll,
     class_name: :Poll,

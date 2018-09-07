@@ -20,4 +20,10 @@ class Response < ApplicationRecord
     class_name: :User,
     primary_key: :id,
     foreign_key: :user_id
+
+  
+
+  def sibling_responses
+
+  end
 end
